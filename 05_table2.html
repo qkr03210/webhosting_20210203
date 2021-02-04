@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- table[border=1] -->
+    <table border="1">
+        <caption>테이블 제목</caption>
+        <colgroup>
+            <!--1,2열은 빨강, 3열은 파랑-->
+            <col span="2" style="background:red">
+            <col style="background:blue;">
+        </colgroup>
+        <!-- 맨 윗줄은 녹색 -->
+        <thead style="background:green">
+            <tr>
+                <th>Table Header</th>
+                <th>Table Header</th>
+                <th>Table Header</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th>Table Header</th>
+                <th>Table Header</th>
+                <th>Table Header</th>
+            </tr>
+            <tr>
+                <td>Table Data</td>
+                <td>Table Data</td>
+                <td>Table Data</td>
+            </tr>
+            <tr>
+                <td>data</td>
+                <td>data</td>
+                <td>data</td>
+            </tr>
+        </tbody>
+        <tfoot style="background:yellow">
+            <tr>
+                <td>Table Data</td>
+                <td>Table Data</td>
+                <td>
+                    <a href="a.jpg">
+                        고양이
+                    </a>
+                </td>
+
+
+            </tr>
+        </tfoot>
+    </table>
+</body>
+
+</html>
