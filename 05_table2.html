@@ -10,15 +10,20 @@
 <body>
     <!-- table[border=1] -->
     <table border="1">
+        <!-- 테이블의 제목을 의미 -->
         <caption>테이블 제목</caption>
+        <!-- 열에 대해서 어떤 양식을 지정할 것인가 -->
         <colgroup>
             <!--1,2열은 빨강, 3열은 파랑-->
-            <col span="2" style="background:red">
-            <col style="background:blue;">
+            <!-- span은 앞에서 부터 수를 계산함 -->
+            <col span="1" style="background:red">
+            <col span="2" style="background:blue">
         </colgroup>
         <!-- 맨 윗줄은 녹색 -->
+        <!-- 테이블의 머리 부분 -->
         <thead style="background:green">
             <tr>
+                <!-- th라서 진한 글자가 나옴 -->
                 <th>Table Header</th>
                 <th>Table Header</th>
                 <th>Table Header</th>
