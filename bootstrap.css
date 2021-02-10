@@ -1025,7 +1025,6 @@ pre code {
         -ms-flex-order: 3;
         order: 3
     }
-
     .order-sm-4 {
         -ms-flex-order: 4;
         order: 4
@@ -1930,6 +1929,12 @@ pre code {
 .table-danger>td,
 .table-danger>th {
     background-color: #f5c6cb
+}
+/* 내가 만든거 */
+.table-lunch,
+.table-lunch>td,
+.table-lunch>th {
+    background-color: #f7f09b
 }
 
 .table-danger tbody+tbody,
