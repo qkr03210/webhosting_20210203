@@ -54,10 +54,18 @@
     
   }
   /********************************/
-  #about-me{
-    font-family: 'Handlee', cursive;
+  #contact{
+    font-family: 'Noto Serif KR', serif;
     border-radius:15px;
   }
+  #contact .content{
+    font-size:25px;
+  }
+  #about-me{
+    font-family: 'Noto Serif KR', serif;
+    border-radius:15px;
+  }
+ 
   #about-me h2, #my-codeing-schedule h2, #skills h2 , #my-media h2, #contact h2, #follow h2{
     display:inline-block;
     text-align:center;
