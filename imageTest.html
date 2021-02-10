@@ -1,127 +1,187 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- 내가 직접 css긁어와서 수정한거 -->
+    <link rel="stylesheet" href="bootstrap.css">
+    <!-- Bootstrap CSS -->
+    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous"> -->
+
+    <!-- css임시로 만든거 -->
+    <link rel="stylesheet" href="test.css">
     <title>이력서</title>
     <style>
         #clr {
-            background:greenyellow
+            background: greenyellow
         }
+
         #clr2 {
-            background:aquamarine
+            background: aquamarine
         }
     </style>
+
+    <!-- 폰트어썸에서 끌어온거 -->
+    <script src="https://kit.fontawesome.com/a6800638c9.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
-    <table border="1" width="800">
-        <caption id="first"></caption>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="index.html">WebHosting</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
 
-        <tr>
-            <th width = "100" height = "120" rowspan="4">
-                <img src="a.jpg" width="100px" height="120px">
-            </th>
-            <th id ="clr" colspan="5"> 이 력 서</th>
-        </tr>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="myhtml/20210210/portfolio.html">projects</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Dropdown
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="#">Action</a>
+                        <a class="dropdown-item" href="#">Another action</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#">Something else here</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <div class="container">
+        <table border="1" width="800">
+            <caption id="first"></caption>
 
-        <tr>
-            <td id ="clr2" width = "100" rowspan="2">성명</td>
-            <td width = "100" >한글</td>
-            <td width = "100" >박상준</td>
-            <td id ="clr2" width = "200">생 년 월 일</td>
-            <td id ="clr2" width = "200">E-mail</td>
-            <!-- <td colspan="2">주민등록번호</td> -->
-        </tr>
-        
-        <tr>
-            <td width="100">한문</td>
-            <td width="100"></td>
-            <td width="200">930322</td>
-            <td width="200">qkr03210@gmail.com</td>
-        </tr>
+            <tr>
+                <th width="100" height="120" rowspan="4">
+                    <img src="a.jpg" width="100px" height="120px">
+                </th>
+                <th id="clr" colspan="5"> 이 력 서</th>
+            </tr>
 
-        <tr>
-            <td id ="clr2" width="150"colspan="2">연락처</td>
-            <td width="150"></td>
-            <td id ="clr2" width="200" >긴급 연락처(핸드폰)</td>
-            <td width="200">010-9774-xxxx</td>
-        </tr>
-        <tr>
-            <td id ="clr2">현 주 소</td>
-            <td colspan="5">대구 수성구 범물동 ~~~</td>
-        </tr>
-    </table>
+            <tr>
+                <td id="clr2" width="100" rowspan="2">성명</td>
+                <td width="100">한글</td>
+                <td width="100">박상준</td>
+                <td id="clr2" width="200">생 년 월 일</td>
+                <td id="clr2" width="200">E-mail</td>
+                <!-- <td colspan="2">주민등록번호</td> -->
+            </tr>
 
-  <table border="1" width="800">
-        <tr>
-            <th id ="clr" colspan ="6">
-                학력사항
-            </th>
-        </tr>
-        <tr>
-            <td id ="clr2">학위과정</td>
-            <td id ="clr2">기간</td>
-            <td id ="clr2">학교명</td>
-            <td id ="clr2">전공</td>
-            <td id ="clr2" width="50">수료</td>
-            <td id ="clr2" width="50">졸업</td>
-        </tr>
+            <tr>
+                <td width="100">한문</td>
+                <td width="100"></td>
+                <td width="200">930322</td>
+                <td width="200">qkr03210@gmail.com</td>
+            </tr>
 
-        <tr>
-            <td>학부과정</td>
-            <td>2013년 3월~2019년 2월</td>
-            <td>금오공과대학교</td>
-            <td>컴퓨터소프트웨어공학</td>
-            <td></td>
-            <td>졸업</td>
-        </tr>
-        <tr>
-            <td height ="20"></td>
-            <td height ="20"></td>
-            <td height ="20"></td>
-            <td height ="20"></td>
-            <td height ="20"></td>
-            <td height ="20"></td>
-        </tr>
+            <tr>
+                <td id="clr2" width="150" colspan="2">연락처</td>
+                <td width="150"></td>
+                <td id="clr2" width="200">긴급 연락처(핸드폰)</td>
+                <td width="200">010-9774-xxxx</td>
+            </tr>
+            <tr>
+                <td id="clr2">현 주 소</td>
+                <td colspan="5">대구 수성구 범물동 ~~~</td>
+            </tr>
+        </table>
 
-        <tr>
-            <th id ="clr" colspan ="6">
-                전공경력사항
-            </th>
-        </tr>
-        <tr>
-            <td id ="clr2">근무년월</td>
-            <td id ="clr2">기간</td>
-            <td id ="clr2">근무처</td>
-            <td id ="clr2">직위</td>
-            <td id ="clr2" colspan="2">자격증</td>
-        </tr>
-        <tr>
-            <td height = "20"></td>
-            <td height = "20"></td>
-            <td height = "20"></td>
-            <td height = "20"></td>
-            <td colspan="2" height = "20"></td>
-        </tr>
-        <tr>
-            <td id ="clr2">호적관계</td>
-            <td id ="clr2">호주와의관계</td>
-            <td></td>
-            <td id ="clr2"> 호주성명</td>
-            <td colspan="2"></td>
-        </tr>
-        <tr>
-            <td height = "20"></td>
-            <td height = "20"></td>
-            <td height = "20"></td>
-            <td height = "20"></td>
-            <td colspan="2" height = "20"></td>
-        </tr>
-    </table>
+        <table border="1" width="800">
+            <tr>
+                <th id="clr" colspan="6">
+                    학력사항
+                </th>
+            </tr>
+            <tr>
+                <td id="clr2">학위과정</td>
+                <td id="clr2">기간</td>
+                <td id="clr2">학교명</td>
+                <td id="clr2">전공</td>
+                <td id="clr2" width="50">수료</td>
+                <td id="clr2" width="50">졸업</td>
+            </tr>
 
-    <a href="index.html">처음으로</a>
+            <tr>
+                <td>학부과정</td>
+                <td>2013년 3월~2019년 2월</td>
+                <td>금오공과대학교</td>
+                <td>컴퓨터소프트웨어공학</td>
+                <td></td>
+                <td>졸업</td>
+            </tr>
+            <tr>
+                <td height="20"></td>
+                <td height="20"></td>
+                <td height="20"></td>
+                <td height="20"></td>
+                <td height="20"></td>
+                <td height="20"></td>
+            </tr>
+
+            <tr>
+                <th id="clr" colspan="6">
+                    전공경력사항
+                </th>
+            </tr>
+            <tr>
+                <td id="clr2">근무년월</td>
+                <td id="clr2">기간</td>
+                <td id="clr2">근무처</td>
+                <td id="clr2">직위</td>
+                <td id="clr2" colspan="2">자격증</td>
+            </tr>
+            <tr>
+                <td height="20"></td>
+                <td height="20"></td>
+                <td height="20"></td>
+                <td height="20"></td>
+                <td colspan="2" height="20"></td>
+            </tr>
+            <tr>
+                <td id="clr2">호적관계</td>
+                <td id="clr2">호주와의관계</td>
+                <td></td>
+                <td id="clr2"> 호주성명</td>
+                <td colspan="2"></td>
+            </tr>
+            <tr>
+                <td height="20"></td>
+                <td height="20"></td>
+                <td height="20"></td>
+                <td height="20"></td>
+                <td colspan="2" height="20"></td>
+            </tr>
+        </table>
+
+        <a href="myhtml/20210210/portfolio.html">이전으로</a>
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"
+        integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"
+        integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous">
+    </script>
 </body>
 
 </html>
