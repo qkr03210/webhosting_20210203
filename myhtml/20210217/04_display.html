@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>04_display</title>
+    <style>
+        span
+        {
+            background: cyan;
+        }
+        div
+        {
+            background: red;
+        }
+        p{
+            background: pink;
+        }
+        #box
+        {
+            display: inline-block;
+            width: 200px;
+            height: 200px;
+            background-color:mediumblue ;
+        }
+        p:nth-of-type(2)
+        {
+            /* 완전히 사라지게 함 */
+            /* 보이지도 않음 */
+            /* display: none; */
+
+            /* 뭔가 빈자리가 있어보이게 함(해당 공간 내용만 투명하게) */
+            /* 보이지만 않음 */
+            visibility: hidden;
+        }
+    </style>
+</head>
+<body>
+    <!-- span은 인라인 태그 -->
+    <span>고양이</span>
+    <!-- p태그와 div태그는 블록속성 -->
+    <div id = "box">
+        <span>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eos soluta architecto iste nihil optio aperiam harum, qui, corrupti quia aliquam id animi ab necessitatibus deleniti neque amet reprehenderit odio nobis?</span>
+    </div>
+    <div id = "box2">
+        <span>Lorem ipsum dolor sit, amet Eos soluta architecto iste nihil optio aperiam harum, qui, corrupti quia aliquam id animi ab necessitatibus deleniti neque amet reprehenderit odio nobis?</span>
+    </div>
+    <p>
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsa reiciendis sit tempora repellendus ullam libero eveniet repudiandae accusantium veritatis adipisci hic, consequuntur impedit, accusamus deserunt perspiciatis quod! Iure, delectus quo.
+    </p>
+    <p>두번째 p태그</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus, officiis.</p>
+</body>
+</html>

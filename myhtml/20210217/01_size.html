@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>01_size</title>
+    <style>
+        /* ()번째인데 p태그이면 */
+        p:nth-child(1){}
+        p:nth-child(2){font-size: /*100%;*/ /*1.0em*/ 16px}
+        p:nth-child(3){font-size: /*150%;*/ /*1.5em*/ 24px}
+        p:nth-child(4){font-size: /*200%;*/ /*2.0em*/ 32px}
+        h1 {color: red;}
+        /* h1태그의 경우 200%가 이미 적용되어있는 상태 */
+        h1:nth-child(5){font-size:200%;}
+        h1:nth-child(6){font-size:300%;}
+    </style>
+</head>
+<body>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Assumenda error veniam aperiam nobis adipisci nesciunt, dolor illo ex modi dignissimos repellat commodi consequatur nihil dicta cupiditate veritatis fugiat maiores nam!</p>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Assumenda error veniam aperiam nobis adipisci nesciunt, dolor illo ex modi dignissimos repellat commodi consequatur nihil dicta cupiditate veritatis fugiat maiores nam!</p>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Assumenda error veniam aperiam nobis adipisci nesciunt, dolor illo ex modi dignissimos repellat commodi consequatur nihil dicta cupiditate veritatis fugiat maiores nam!</p>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Assumenda error veniam aperiam nobis adipisci nesciunt, dolor illo ex modi dignissimos repellat commodi consequatur nihil dicta cupiditate veritatis fugiat maiores nam!</p>
+    <h1>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Autem corporis numquam doloremque maiores expedita saepe adipisci deleniti blanditiis, rem magni, inventore mollitia itaque in consequuntur ad distinctio. Distinctio, architecto doloribus.</h1>
+    <h1>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil beatae placeat ducimus laudantium ea libero eaque quis praesentium? Cum expedita doloribus nesciunt, vero eaque corporis molestias earum iusto optio tempora!</h1>
+    <h1>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil beatae placeat ducimus laudantium ea libero eaque quis praesentium? Cum expedita doloribus nesciunt, vero eaque corporis molestias earum iusto optio tempora!</h1>
+    
+</body>
+</html>
