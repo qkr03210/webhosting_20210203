@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>10_font_line_height</title>
+    <style>
+        .button
+        {
+            width: 150px;
+            height: 70px;
+            border-radius: 30px;
+            background-color: cyan;
+        }
+        .font_center
+        {
+            text-align: center;
+        }
+        .button>a{
+            /* a태그가 block속성이 아니어서 가로 세로 정해준게 적용이 안된다 */
+            display: block;
+            /* 가로로 중앙정렬은 있는데 세로로는 없어서 직접 맞춰줘야함 */
+            /* 세로 중앙 */
+            line-height: 70px;
+            
+            /* a태그의 밑줄이 없어짐 */
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+<div class="button">
+    <a href="#" class="font_center">
+        click
+    </a>
+</div>
+</body>
+</html>

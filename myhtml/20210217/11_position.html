@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>11_position</title>
+    <style>
+        .box
+        {
+            /* ; 세미 콜론 :콜론 */
+            border: 10px solid black;
+            width: 100px;
+            height: 100px;
+        }
+        .red
+        {
+            background-color: red;
+            /* 위치를 잡는 순서는 태그를 통해서임 */
+            /* 태그 순서대로 */
+            position: static;/*기본값*/
+            left:50px;
+        }
+
+        .green
+        {
+            background-color: springgreen;
+            position: relative;/*기본값*/
+            left:50px;
+        }
+
+        .blue
+        {
+            background-color: skyblue;
+            /* 왼쪽 상단(0,0)을 기준으로 절대 좌표로 이동함 */
+            position: fixed;/*기본값*/
+            left: 500px;
+            top: 500px;
+        }
+        .pink
+        {
+            background-color: hotpink;
+            /* 부모 태그를 기준으로 좌측 상단을 0,0으로 봄 */
+            position: absolute;
+            left: 20px;
+            top: 20px;
+            width: 30px;
+            height: 30px;
+        }
+    </style>    
+</head>
+<body>
+    <div class="box red">
+        <div class="box pink">1</div>
+    </div>
+    <div class="box green"></div>
+    <div class="box blue"></div>
+
+    
+    <div class="box green">
+        <div class="box pink">2</div>
+    </div>
+</body>
+</html>

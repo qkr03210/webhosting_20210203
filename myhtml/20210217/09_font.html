@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>09_font</title>
+    <style>
+        .a{font-size: 32px;}
+        .b{font-size: 2em;}
+        .c{font-size: large;}
+        .d{font-size: small;}
+        
+
+        /* 폰트 이름에 공백이 들어가있다면 ''로 감싸줘야함 */
+        .font_roman{font-family: 'Times New Roman';}
+
+        /* {1,2,3} 1번이 없다면 2번 폰트가 적용 */
+        /* 만약 있는게 없다면 해당 브라우저의 기본 폰트가 적용됨 */
+        .font_arial{font-family: Arial, Helvetica, sans-serif;}
+
+        /* 굵은 글자(진하게) */
+        .font_bold{font-weight: bold;}
+    </style>
+</head>
+<body>
+    <h1>Lorem, ipsum.</h1>
+    <p class="a font_roman">Lorem,ipsum dolor.1</p>
+    <p class="b font_bold">Lorem,ipsum dolor.2</p>
+    <p class="c">Lorem,ipsum dolor.3</p>
+    <p class="d">Lorem,ipsum dolor.4</p>
+</body>
+</html>

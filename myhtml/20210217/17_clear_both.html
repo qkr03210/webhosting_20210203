@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            width: 960px;
+            /* width로 넓이를 지정하고 margin을 쓰면 중앙정렬 */
+            margin: 0 auto;
+        }
+
+        #Aside {
+            float: left;
+            width: 298px;
+            background: lightseagreen;
+            /* 그냥 꽉 찬 상태로 하게되면 초과되므로 border x 2(좌우) 만큼의 px을 빼야한다 */
+            border: 1px solid black;
+        }
+
+        #Section {
+            /* 여백을 둬서 Aside와 Section사이에 공백을 만듬 */
+            /* float: right;
+            width: 650px; */
+            float: left;
+            width: 658px;
+            background: limegreen;
+            border: 1px solid black;
+        }
+        
+        /* 16이랑 차이점 */
+        /* div content가 없음 */
+        /* section밑에 div 하나 더 만들어서 clear:both를 적게되면 위로 안올라옴 */
+        .clear
+        {
+            clear: both;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="Header">
+        <h1>Header</h1>
+    </div>
+    <div id="Navigation">
+        <h1>Navigation</h1>
+    </div>
+    <div id="Aside">
+        <h1>Aside</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus, ab!</p>
+    </div>
+    <div id="Section">
+        <h1>Section</h1>
+        <p>Lorem ipsum dolor,</p>
+    </div>
+    <div class="clear"></div>
+    <div id="Footer">
+        <h1>Footer</h1>
+    </div>
+
+
+</body>
+
+</html>
