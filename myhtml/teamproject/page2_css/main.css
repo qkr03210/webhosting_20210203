@@ -1,4 +1,11 @@
 main {
-    background: #f2f4f7;
-    min-height: 700px;
-  }
+  /* background: #f2f4f7; */
+  min-height: 700px;
+
+  /* ==================== */
+  width: 1183px;
+  margin: 0 auto;
+
+  /* 수평 레이아웃 구성 */
+  overflow: hidden;
+}

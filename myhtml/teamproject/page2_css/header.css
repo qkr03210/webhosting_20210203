@@ -1,7 +1,7 @@
 header {
     margin: auto; /* header의 양쪽 여백(margin)을 동등하게 맞춤 -> 수평가운데정렬 */
     width: 1080px;
-    height: 300px;
+    height: 310px;
     display: flex;
     align-items: center; /* 하위 요소들 수직 가운데정렬 */
     position: relative;
@@ -63,14 +63,14 @@ header {
     width: 220px;
     height: 65px;
   } */
-  .search_box {
+  .search {
     width: 520px;
     height: 50px;
     border: 2px solid #03cf5d;
     display: flex;
     align-items: center;
   }
-  .search_box input {
+  .search input {
     flex: 9; /* search-box내부에서 9만큼의 크기를 차지(비율) */
     height: 46px;
     padding-left: 12px;
@@ -79,7 +79,7 @@ header {
     outline: none;
     font-size: 18px;
   }
-  .search_box button {
+  .search button {
     flex: 1; /* search-box내부에서 1만큼의 크기를 차지(비율) */
     height: 46px;
     margin: 0;

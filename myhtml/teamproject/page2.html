@@ -12,6 +12,8 @@
     <link rel="stylesheet" type="text/css" href="page2_css/header.css">
     <link rel="stylesheet" type="text/css" href="page2_css/main.css">
     <!-- =================================================================================== -->
+
+
 </head>
 
 <body>
@@ -19,59 +21,52 @@
     <!-- =================================================================================== -->
     <header>
         <div class="links">
-            <a href="/" class="link_text">시작 페이지로 바로가기</a>
-            <a href="/" class="link_text">github로 바로가기</a>
+            <a href="https://qkr03210.github.io/webhosting_20210203/" class="link_text">시작 페이지로 바로가기</a>
+            <a href="#" class="link_text">github로 바로가기</a>
         </div>
         <div id="header_image">
-            <img src="D:\webhosting_20210203\cat1.jpg" width=150 alt="프로필 사진 들어갈 자리">
+            <a href="page2.html"><img src="../../cat1.jpg" width=150 alt="프로필 사진 들어갈 자리"></a>
         </div>
         <!-- <a href="/"><img src="" alt="프로필 사진 들어갈 자리"class="img_logo" /></a> -->
-        <form>
-            <!-- 웹접근성 향상을 위해 fieldset과 legend를 사용해주는 것이 좋습니다. 
-              두 요소의 기본 디자인을 숨기는 방법은 CSS(.visually-hidden)를 참고해주세요-->
-            <fieldset>
-                <legend class="visually-hidden">검색</legend>
-                <div class="search_box">
-                    <input type="text" maxlength="225" tabindex="1" />
-                    <button type="submit" tabindex="2">
-                        검색
-                    </button>
-                </div>
-            </fieldset>
+        <form class='search'>
+            <input class='keyword' type='text' name='search' maxlength=255 value="" autocomplete="off">
+
+            <!-- <select class = 'SelectSearch' name = 'WhichSearch' > -->
+            <option class='SelectSearch' name='WhichSearch' id='naver' value='naver'></option>
+            <!-- </select> -->
+            <button class="img-button" type="submit" name="click" value="">
+                <i class="fas fa-search">검색</i>
+            </button>
         </form>
         <nav>
             <div class="nav_items">
                 <ul>
-                    <li><a href="/">메일</a></li>
-                    <li><a href="/">카페</a></li>
-                    <li><a href="/">블로그</a></li>
-                    <li><a href="/">지식iN</a></li>
-                    <li><a href="/">쇼핑</a></li>
-                    <li><a href="/">Pay</a></li>
-                    <li><a href="/">TV</a></li>
-                    <li><a href="/">사전</a></li>
-                    <li><a href="/">뉴스</a></li>
-                    <li><a href="/">증권</a></li>
-                    <li><a href="/">부동산</a></li>
-                    <li><a href="/">지도</a></li>
-                    <li><a href="/">영화</a></li>
-                    <li><a href="/">뮤직</a></li>
-                    <li><a href="/">책</a></li>
-                    <li><a href="/">웹툰</a></li>
-                    <li><a href="/">더보기</a></li>
+                    <li><a href="page2/1.html" target="frame_target">1</a></li>
+                    <li><a href="page2/2.html" target="frame_target">2</a></li>
+                    <li><a href="#">3</a></li>
+                    <li><a href="#">4</a></li>
+                    <li><a href="#">5</a></li>
+                    <li><a href="#">6</a></li>
+                    <li><a href="https://ehddnr3569.github.io/-exercise_book/210210/kimdonguk.html"
+                            target="frame_target">iframe</a></li>
+
                 </ul>
                 <div class="keyword">
                     <span class="color_naver">1</span>
-                    <span>Eoldam spark</span></span>
+                    <span>고양이</span>
                 </div>
+
+
             </div>
         </nav>
     </header>
     <!-- =================================================================================== -->
-
-
-
     <main>
+        <div overflow-x:hidden;>
+            <iframe src="D:\webhosting_20210203\myhtml\teamproject\main.html" name="frame_target"
+                style="width: 1200px; height:2000px; border:none"></iframe>
+        </div>
+
 
     </main>
 
@@ -81,8 +76,8 @@
     <!-- =================================================================================== -->
     <footer>
         <div class="notice_box">
-            <a href="/">공지사항</a>
-            <a href="/">서비스 전체보기></a>
+            <a href="#">공지사항</a>
+            <a href="#">서비스 전체보기></a>
         </div>
         <div class="aside_box">
             <div class="area_user">
@@ -90,28 +85,23 @@
                     <span class="text_bold-13">참고한 사이트</span>
                     <ul>
                         <li><a href="https://codingbroker.tistory.com/115">Eoldam spark</a></li>
-                        <!-- <li><a href="/">스몰비즈니스</a></li> -->
+                    </ul>
+                    <ul>
+                        <li><a href="https://showyourself.tistory.com/3">검색창</a></li>
                     </ul>
                 </div>
-                <div class="area_user_row">
+                <!-- <div class="area_user_row">
                     <span class="text_bold-13">Partners</span>
                     <ul>
-                        <li><a href="/">비즈니스 광고</a></li>
-                        <li><a href="/">스토어 개설</a></li>
-                        <li><a href="/">지역업체 등록</a></li>
+                        <li><a href="#">비즈니스 광고</a></li>
                     </ul>
-                </div>
-                <div class="area_user_row">
+                </div> -->
+                <!-- <div class="area_user_row">
                     <span class="text_bold-13">Developers</span>
                     <ul>
-                        <li><a href="/">네이버 개발자센터</a></li>
-                        <li><a href="/">오픈API</a></li>
-                        <li><a href="/">오픈소스</a></li>
-                        <li><a href="/">네이버 D2</a></li>
-                        <li><a href="/">네이버 D2SF</a></li>
-                        <li><a href="/">네이버 랩스</a></li>
+                        <li><a href="#">네이버 개발자센터</a></li>
                     </ul>
-                </div>
+                </div> -->
             </div>
             <div class="area_col">
                 <div class="ac_content">
@@ -130,14 +120,8 @@
         </div>
         <div class="bottom_box">
             <ul>
-                <li><a href="/">회사소개</a></li>
-                <li><a href="/">인재채용</a></li>
-                <li><a href="/">제휴제안</a></li>
-                <li><a href="/">이용약관</a></li>
-                <li><a href="/">개인정보처리방침</a></li>
-                <li><a href="/">청소년보호정책</a></li>
-                <li><a href="/">네이버 정책</a></li>
-                <li><a href="/">고객센터</a></li>
+                <li><a href="/">A</a></li>
+                <li><a href="/">B</a></li>
                 <li><a href="/">&copy; NAVER Corp.</a></li>
             </ul>
         </div>
@@ -145,7 +129,7 @@
     <!-- =================================================================================== -->
 
 
-
+    <script type="text/javascript" src="a.js"></script>
 </body>
 
 </html>
