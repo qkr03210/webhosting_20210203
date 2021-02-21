@@ -14,6 +14,12 @@
     </style>
 </head>
 <body>
-    <p>안녕 이건 4번이야</p>
+	<h2>웹 스토리지 정보 확인</h2>
+	<p>당신이 보고 있는 이 웹 문서는 <span id="count"></span>번째 보고 있는 중입니다.</p>
+	<script>
+		if (!localStorage.pageLoadCount) localStorage.pageLoadCount = 0;
+		localStorage.pageLoadCount = parseInt(localStorage.pageLoadCount) + 1;
+		document.getElementById('count').textContent = localStorage.pageLoadCount;
+	</script>
 </body>
 </html>
