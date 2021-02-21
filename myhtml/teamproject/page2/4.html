@@ -1,25 +1,473 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+
+    <title>스크롤</title>
     <style>
-         * {
+        * {
             /* background: #f2f4f7; */
             width: 0 auto;
             max-width: 1183px;
         }
+
+        body {
+            position: relative;
+            /* padding-top: 70px; */
+        }
+
+        ul.nav-pills {
+            top: 0px;
+            position: fixed;
+        }
+
+        ul>li>a {
+            color: #03cf5d;
+        }
+
+        /* 
+        div.col-8 div {
+            height: 500px;
+        } */
     </style>
 </head>
-<body>
-	<h2>웹 스토리지 정보 확인</h2>
-	<p>당신이 보고 있는 이 웹 문서는 <span id="count"></span>번째 보고 있는 중입니다.</p>
-	<script>
-		if (!localStorage.pageLoadCount) localStorage.pageLoadCount = 0;
-		localStorage.pageLoadCount = parseInt(localStorage.pageLoadCount) + 1;
-		document.getElementById('count').textContent = localStorage.pageLoadCount;
-	</script>
+
+<body data-spy="scroll" data-target="#myScrollspy" data-offset="1">
+    <div class="container-fluid">
+        <div class="row navbar-expand-md">
+            <nav class="col-md-3 col-lg-1 navbar-collapse collapse sidebar" id="myScrollspy">
+                <div class="sidebar-sticky flex-column w-100 mt-1">
+                    <ul class="nav nav-pills flex-column">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#section1">
+                                <span data-feather="file"></span> ㄱ
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#section2">
+                                <span data-feather="shopping-cart"></span> ㄷ~ㅂ
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#section3">
+                                <span data-feather="users"></span> ㅅ~ㅇ
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#section4">
+                                <span data-feather="file"></span> ㅊ
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#section5">
+                                <span data-feather="shopping-cart"></span> ㅎ
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+            <div class="col-sm-9 col-8">
+                <div class="row">
+                    <!-- div.col-3*4 -->
+                    <div class="col-3" id="section1">
+                        <div class="card">
+                            <img src="https://avatars.githubusercontent.com/u/77952951?s=460&v=4" height="170px"
+                                class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">김 관 덕</h5>
+                                <p class="card-text">Some quick example text to build on the card title and make up the
+                                    bulk of the card's
+                                    content.</p>
+                                <a href="https://barnabas0506.github.io/webhosting_20210203"
+                                    class="btn btn-primary btn-block">홈페이지</a>
+                                <a href="https://github.com/barnabas0506" class="btn btn-primary btn-block">GitHub
+                                    바로가기</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-3">
+                        <div class="card">
+                            <img src="https://avatars.githubusercontent.com/u/77947195?s=460&v=4" height="170px"
+                                class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">김 동 욱</h5>
+                                <p class="card-text">Some quick example text to build on the card title and make up the
+                                    bulk of the card's
+                                    content.</p>
+                                <a href="https://ehddnr3569.github.io/-exercise_book/210210/kimdonguk.html"
+                                    class="btn btn-primary btn-block">홈페이지</a>
+                                <a href="https://github.com/ehddnr3569 " class="btn btn-primary btn-block">GitHub로
+                                    가기</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-3">
+                        <div class="card">
+                            <img src="https://avatars.githubusercontent.com/u/77947280?s=460&v=4" height="170px"
+                                class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">김 두 희</h5>
+                                <p class="card-text">Some quick example text to build on the card title and make up the
+                                    bulk of the card's
+                                    content.</p>
+                                <a href="https://kimduhee7524.github.io/webhosting_20210203/20210210_duhee/my_WH.html"
+                                    class="btn btn-primary btn-block">홈페이지</a>
+                                <a href="https://github.com/kimduhee7524  " class="btn btn-primary btn-block">GitHub로
+                                    가기</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-3">
+                        <div class="card">
+                            <img src="https://avatars.githubusercontent.com/u/67178562?s=460&v=4" height="170px"
+                                class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">김 민 성</h5>
+                                <p class="card-text">Some quick example text to build on the card title and make up the
+                                    bulk of the card's
+                                    content.</p>
+                                <!-- 빨 -->
+                                <a href="https://jiokim-7.github.io/wephosting_20210203"
+                                    class="btn btn-danger btn-block">홈페이지</a>
+                                <a href="https://github.com/jiokim-7" class="btn btn-primary btn-block">GitHub 바로가기</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- div사이에 공백을 넣는 기능 -->
+                <!-- 2번째 줄 -->
+                <div style="margin-bottom: 20px;"></div>
+                <div class="row">
+                    <div class="col-3">
+                        <div class="card">
+                            <img src="https://avatars.githubusercontent.com/u/77947160?s=460&v=4" height="170px"
+                                class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">김 준 석</h5>
+                                <p class="card-text">Some quick example text to build on the card title and make up the
+                                    bulk of the card's
+                                    content.</p>
+                                <a href="https://kjs941008.github.io/webhosting_20210203/210210/bootstrap_myblog.html"
+                                    class="btn btn-primary btn-block">홈페이지</a>
+                                <a href="https://github.com/kjs941008" class="btn btn-primary btn-block">GitHub로 가기</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-3">
+                        <div class="card">
+                            <img src="https://avatars.githubusercontent.com/u/77947256?s=460&v=4" height="170px"
+                                class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">김 지 연</h5>
+                                <p class="card-text">Some quick example text to build on the card title and make up the
+                                    bulk of the card's
+                                    content.</p>
+                                <a href="https://onlykjy03.github.io/webhosting_20210203"
+                                    class="btn btn-primary btn-block">홈페이지</a>
+                                <a href="https://github.com/onlykjy03 " class="btn btn-primary btn-block">GitHub로 가기</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-3" id="section2">
+                        <div class="card">
+                            <img src="https://avatars.githubusercontent.com/u/77947209?s=460&v=4" height="170px"
+                                class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">도 현 우</h5>
+                                <p class="card-text">Some quick example text to build on the card title and make up the
+                                    bulk of the card's
+                                    content.</p>
+                                <a href="https://dhw1009.github.io/webhwebhosting_20210203/"
+                                    class="btn btn-primary btn-block">수정해야함 지금
+                                    404뜸</a>
+                                <a href="https://github.com/dhw1009" class="btn btn-primary btn-block">GitHub 바로가기</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-3">
+                        <div class="card">
+                            <img src="https://avatars.githubusercontent.com/u/33486745?s=460&u=ef5058e38d63281fa14ee61dfd4e916c5a386138&v=4"
+                                height="170px" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">박 상 준</h5>
+                                <p class="card-text">Some quick example text to build on the card title and make up the
+                                    bulk of the card's
+                                    content.</p>
+                                <a href="https://qkr03210.github.io/webhosting_20210203/"
+                                    class="btn btn-primary btn-block">홈페이지</a>
+                                <a href="https://github.com/qkr03210" class="btn btn-primary btn-block">GitHub로 가기</a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <!-- 3번째 줄 -->
+                <div style="margin-bottom: 20px;"></div>
+                <div class="row">
+                    <div class="col-3">
+                        <div class="card">
+                            <img src="https://avatars.githubusercontent.com/u/77947247?s=460&u=04d94b9cd7b0b635a0aaca33002740dad844bbc0&v=4"
+                                height="170px" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">박 소 윤</h5>
+                                <p class="card-text">Some quick example text to build on the card title and make up the
+                                    bulk of the card's
+                                    content.</p>
+                                <a href="https://soyun2.github.io/webhosting2_20210203"
+                                    class="btn btn-primary btn-block">홈페이지</a>
+                                <a href="https://github.com/soyun2" class="btn btn-primary btn-block">GitHub 바로가기</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-3">
+                        <div class="card">
+                            <img src="https://avatars.githubusercontent.com/u/59479926?s=460&v=4" height="170px"
+                                class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">배 지 왕</h5>
+                                <p class="card-text">Some quick example text to build on the card title and make up the
+                                    bulk of the card's
+                                    content.</p>
+                                <a href="https://BAE-JI-WANG.github.io/wenhosting_20210203"
+                                    class="btn btn-primary btn-block">index.html없음</a>
+                                <a href="https://github.com/BAE-JI-WANG" class="btn btn-primary btn-block">GitHub로
+                                    가기</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-3" id="section3">
+                        <div class="card">
+                            <img src="#" height="170px" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">신 용 원</h5>
+                                <p class="card-text">Some quick example text to build on the card title and make up the
+                                    bulk of the card's
+                                    content.</p>
+                                <a href="https://kimduhee7524.github.io/webhosting_20210203/20210210_duhee/my_WH.html"
+                                    class="btn btn-primary btn-block">주소 못 찾음</a>
+                                <a href="https://github.com/kimduhee7524  " class="btn btn-primary btn-block">GitHub로
+                                    가기</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-3" id="section3">
+                        <div class="card">
+                            <img src="https://avatars.githubusercontent.com/u/77947238?s=460&v=4" height="170px"
+                                class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">안 재 혁</h5>
+                                <p class="card-text">Some quick example text to build on the card title and make up the
+                                    bulk of the card's
+                                    content.</p>
+                                <a href="https://wogur03157.github.io/webhosting_20210203/"
+                                    class="btn btn-primary btn-block">홈페이지</a>
+                                <a href="https://github.com/wogur03157" class="btn btn-primary btn-block">GitHub
+                                    바로가기</a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <!-- 4번째 줄 -->
+                <div style="margin-bottom: 20px;"></div>
+                <div class="row">
+                    <div class="col-3">
+                        <div class="card">
+                            <img src="https://avatars.githubusercontent.com/u/77947157?s=460&u=87dfe014817a11e8da463c7a06f65d0500b7a5a5&v=4"
+                                height="170px" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">안 준 모</h5>
+                                <p class="card-text">Some quick example text to build on the card title and make up the
+                                    bulk of the card's
+                                    content.</p>
+                                <!-- 초 -->
+                                <a href="https://JM-94.github.io/webhosting_20210203"
+                                    class="btn btn-success btn-block">홈페이지</a>
+                                <a href="https://github.com/JM-94" class="btn btn-primary btn-block">GitHub 바로가기</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-3">
+                        <div class="card">
+                            <img src="https://avatars.githubusercontent.com/u/77947169?s=460&v=4" height="170px"
+                                class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">양 수 빈</h5>
+                                <p class="card-text">Some quick example text to build on the card title and make up the
+                                    bulk of the card's
+                                    content.</p>
+                                <a href="https://YangSuBin1101.github.io/webhosting_20210203"
+                                    class="btn btn-primary btn-block">index.html없음</a>
+                                <a href="https://github.com/YangSuBin1101" class="btn btn-primary btn-block">GitHub로
+                                    가기</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-3">
+                        <div class="card">
+                            <img src="https://avatars.githubusercontent.com/u/75673900?s=460&u=2e2689b6c4ba0053779d3938fa82424297e0e687&v=4"
+                                height="170px" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">이 승 직</h5>
+                                <p class="card-text">Some quick example text to build on the card title and make up the
+                                    bulk of the card's
+                                    content.</p>
+                                <a href="https://seungjik-lee.github.io/HTML_grammer/"
+                                    class="btn btn-primary btn-block">홈페이지</a>
+                                <a href="https://github.com/seungjik-lee" class="btn btn-primary btn-block">GitHub
+                                    바로가기</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-3">
+                        <div class="card">
+                            <img src="https://avatars.githubusercontent.com/u/77947192?s=460&v=4" height="170px"
+                                class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">이 시 형</h5>
+                                <p class="card-text">Some quick example text to build on the card title and make up the
+                                    bulk of the card's
+                                    content.</p>
+                                <a href="https://FirstBright.github.io/webhosting_20210203"
+                                    class="btn btn-primary btn-block">홈페이지</a>
+                                <a href="https://github.com/FirstBright" class="btn btn-primary btn-block">GitHub
+                                    바로가기</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- 5번째 줄 -->
+                <div style="margin-bottom: 20px;"></div>
+                <div class="row">
+                    <div class="col-3">
+                        <div class="card">
+                            <img src="https://avatars.githubusercontent.com/u/33830344?s=460&v=4" height="170px"
+                                class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">이 재 문</h5>
+                                <p class="card-text">Some quick example text to build on the card title and make up the
+                                    bulk of the card's
+                                    content.</p>
+                                <a href="https://jaemoonnlee.github.io/webhosting"
+                                    class="btn btn-primary btn-block">홈페이지</a>
+                                <a href="https://github.com/jaemoonnlee " class="btn btn-primary btn-block">GitHub로
+                                    가기</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-3">
+                        <div class="card">
+                            <img src="https://avatars.githubusercontent.com/u/77614008?s=460&v=4" height="170px"
+                                class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">이 한 글</h5>
+                                <p class="card-text">Some quick example text to build on the card title and make up the
+                                    bulk of the card's
+                                    content.</p>
+                                <a href="https://geul9228.github.io/webhosting_20210203"
+                                    class="btn btn-primary btn-block">홈페이지</a>
+                                <a href="https://github.com/geul9228" class="btn btn-primary btn-block">GitHub로 가기</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-3" id="section4">
+                        <div class="card">
+                            <img src="https://avatars.githubusercontent.com/u/13102546?s=460&v=4" height="170px"
+                                class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">최 건 호</h5>
+                                <p class="card-text">Some quick example text to build on the card title and make up the
+                                    bulk of the card's
+                                    content.</p>
+                                <a href="https://guntiger7.github.io/webHosting" class="btn btn-primary btn-block">홈페이지
+                                </a>
+                                <a href="https://github.com/guntiger7 " class="btn btn-primary btn-block">GitHub
+                                    바로가기</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-3">
+                        <div class="card">
+                            <img src="#" height="170px" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">최 수 련</h5>
+                                <p class="card-text">Some quick example text to build on the card title and make up the
+                                    bulk of the card's
+                                    content.</p>
+                                <a href="https://BAE-JI-WANG.github.io/wenhosting_20210203"
+                                    class="btn btn-primary btn-block">주소 못 찾음</a>
+                                <a href="https://github.com/BAE-JI-WANG" class="btn btn-primary btn-block">GitHub로
+                                    가기</a>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                </div>
+                <!-- 6번째 줄 -->
+                <div style="margin-bottom: 20px;"></div>
+                <div class="row">
+                    <div class="col-3">
+                        <div class="card">
+                            <img src="https://avatars.githubusercontent.com/u/77947258?s=460&v=4" height="170px"
+                                class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">최 시 영</h5>
+                                <p class="card-text">Some quick example text to build on the card title and make up the
+                                    bulk of the card's
+                                    content.</p>
+                                <!-- 회 -->
+                                <a href="https://siyoung0523.github.io/webhosting_20210203"
+                                    class="btn btn-secondary btn-block">홈페이지
+                                </a>
+                                <a href="https://github.com/siyoung0523" class="btn btn-primary btn-block">GitHub
+                                    바로가기</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-3" id="section5">
+                        <div class="card">
+                            <img src="https://avatars.githubusercontent.com/u/76682083?s=460&v=4" height="170px"
+                                class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">한 이 진</h5>
+                                <p class="card-text">Some quick example text to build on the card title and make up the
+                                    bulk of the card's
+                                    content.</p>
+                                <a href="https://hanYijin.github.io/webhosting_20210203"
+                                    class="btn btn-primary btn-block">홈페이지</a>
+                                <a href="https://github.com/hanYijin" class="btn btn-primary btn-block">GitHub로 가기</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-3">
+                        <div class="card">
+                            <img src="https://avatars.githubusercontent.com/u/76682083?s=460&v=4" height="170px"
+                                class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">홍 성 인</h5>
+                                <p class="card-text">Some quick example text to build on the card title and make up the
+                                    bulk of the card's
+                                    content.</p>
+                                <a href="https://HongSungIn827.github.io/webhosting_20210203"
+                                    class="btn btn-primary btn-block">홈페이지</a>
+                                <a href="https://github.com/HongSungIn827" class="btn btn-primary btn-block">GitHub로 가기</a>
+                            </div>
+                        </div>
+                    </div> 
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
+
 </html>

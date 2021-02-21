@@ -13,7 +13,7 @@
     <link rel="stylesheet" type="text/css" href="page2_css/main.css">
     <!-- =================================================================================== -->
     <!-- 그냥 넣음 -->
-   
+
 
 </head>
 
@@ -38,41 +38,45 @@
                 <i class="fas fa-search">검색</i>
             </button>
         </form>
-        <nav>
-            <div class="nav_items">
-                <ul>
-                    <li><a href="page2/1.html" target="frame_target">1</a></li>
-                    <li><a href="page2/2.html" target="frame_target">2</a></li>
-                    <li><a href="page2/3.html" target="frame_target">3</a></li>
-                    <li><a href="page2/4.html" target="frame_target">4</a></li>
-                    <li><a href="#">5</a></li>
-                    <li><a href="#">6</a></li>
-                    <li><a href="https://ehddnr3569.github.io/-exercise_book/210210/kimdonguk.html"
-                            target="frame_target">iframe</a></li>
-
-                </ul>
-                <!-- <details open>
-                    <summary> 목차</summary>
-                        <p>aaaa</p>
-                        <p>bbb</p>
-                </details> -->
-                <div class="keyword">
-                    <span class="color_naver">1</span>
-                    <span>고양이</span>
+            <nav>
+                <div class="nav_items">
+                    <ul>
+                        <li><a href="page2/1.html" target="frame_target">1</a></li>
+                        <li><a href="page2/2.html" target="frame_target">과제</a></li>
+                        <li><a href="page2/3.html" target="frame_target">3</a></li>
+                        <li><a href="page2/4.html" target="frame_target">수강생</a></li>
+                        <li><a href="#">5</a></li>
+                        <li><a href="#">6</a></li>
+                        <li><a href="https://ehddnr3569.github.io/-exercise_book/210210/kimdonguk.html"
+                                target="frame_target">iframe</a></li>
+    
+                    </ul>
+                    <!-- <details open>
+                        <summary> 목차</summary>
+                            <p>aaaa</p>
+                            <p>bbb</p>
+                    </details> -->
+                    <div class="keyword">
+                        <span>
+                            방문 횟수 <span class="color_naver" id="count"></span>
+                        </span>
+                        <script>
+                            if (!localStorage.pageLoadCount) localStorage.pageLoadCount = 0;
+                            localStorage.pageLoadCount = parseInt(localStorage.pageLoadCount) + 1;
+                            document.getElementById('count').textContent = localStorage.pageLoadCount;
+                        </script>
+                    </div>
+    
+    
                 </div>
-
-
-            </div>
-        </nav>
+            </nav>
+        
     </header>
     <!-- =================================================================================== -->
     <main>
         <div overflow-x:hidden;>
-            <iframe src="page2/1.html"
-                name="frame_target" style="width: 1200px; height:1500px; border:none"></iframe>
+            <iframe src="page2/1.html" name="frame_target" style="width: 1200px; height:1500px; border:none"></iframe>
         </div>
-
-
     </main>
 
 
@@ -93,32 +97,20 @@
                         <li><a href="https://showyourself.tistory.com/3">검색 참고</a></li>
                     </ul>
                 </div>
-                <!-- <div class="area_user_row">
-                    <span class="text_bold-13">Partners</span>
-                    <ul>
-                        <li><a href="#">비즈니스 광고</a></li>
-                    </ul>
-                </div> -->
-                <!-- <div class="area_user_row">
-                    <span class="text_bold-13">Developers</span>
-                    <ul>
-                        <li><a href="#">네이버 개발자센터</a></li>
-                    </ul>
-                </div> -->
             </div>
             <div class="area_col">
                 <div class="ac_content">
-                    <div class="text_bold-13">웨일 브라우저</div>
-                    <div class="ac_link"><a href="/">다운받기</a></div>
+                    <div class="text_bold-13">경북산업<br>직업전문학교</div>
+                    <div class="ac_link"><a href="http://www.kb.or.kr">바로가기</a></div>
                 </div>
-                <a href="/"><img src="../../pig.gif" width="60px" height="60px" class="ac_img" /></a>
+                <a href="http://www.kb.or.kr"><img src="https://searchad-phinf.pstatic.net/MjAxOTEyMzFfNjkg/MDAxNTc3Nzc0MjY0NzEw.ZVJDksuI2XTzzwybUdT4vvd1sCrblErC59rhrmoBA0Eg.jr8zuIjam1PemrKrSsECpXXzyOs54pWwkkHv-TDBzj4g.PNG/155905-31a0ef68-b54b-4d1b-aec4-6adaf018f91b.png?type=f120_120" width="60px" height="60px" class="ac_img" /></a>
             </div>
             <div class="area_col">
                 <div class="ac_content">
-                    <div class="text_bold-13">프로젝트 꽃</div>
-                    <div class="ac_link"><a href="/">바로가기</a></div>
+                    <div class="text_bold-13">STEP</div>
+                    <div class="ac_link"><a href="https://kb.step.or.kr/main.do">바로가기</a></div>
                 </div>
-                <a href="/"><img src="../../pig.gif" width="60px" height="60px" class="ac_img" /></a>
+                <a href="https://kb.step.or.kr/main.do"><img src="https://www.step.or.kr/upload/comp/2/main_toplogo.png" width="60px" height="60px" class="ac_img" /></a>
             </div>
         </div>
         <div class="bottom_box">
