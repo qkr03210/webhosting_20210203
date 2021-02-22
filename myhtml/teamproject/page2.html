@@ -13,11 +13,17 @@
     <link rel="stylesheet" type="text/css" href="page2_css/main.css">
     <!-- =================================================================================== -->
     <!-- 그냥 넣음 -->
-
+    <script>
+        function time() {
+            var time = new Date();
+            document.getElementById("now").innerHTML = time.getHours() + ":" + time.getMinutes() + ":" + time.getSeconds();
+            setInterval("time()", 1000);
+        }
+    </script>
 
 </head>
 
-<body>
+<body onload="time()">
     <!-- =================================================================================== -->
     <header>
         <div class="links">
@@ -44,13 +50,14 @@
                     <li><a href="page2/1.html" target="frame_target">기본 화면</a></li>
                     <li><a href="page2/2.html" target="frame_target">과제</a></li>
                     <li><a href="page2/3.html" target="frame_target">3</a></li>
-                    <li><a href="page2/4.html" target="frame_target">수강인원</a></li>
+                    <li><a href="page2/4.html" target="frame_target">수강인원 홈페이지 바로가기</a></li>
                 </ul>
                 <!-- <details open>
                         <summary id="mmm"> 목차</summary>
                             <p>aaaa</p>
                             <p>bbb</p>
                     </details> -->
+                <h2><span id="now" ></span></h2>
                 <div class="keyword">
                     <span>
                         방문 횟수 <span class="color_naver" id="count"></span>
@@ -61,8 +68,7 @@
                         document.getElementById('count').textContent = localStorage.pageLoadCount;
                     </script>
                 </div>
-
-
+                
             </div>
         </nav>
 
@@ -78,10 +84,10 @@
 
 
     <!-- =================================================================================== -->
-    <footer>
+    <footer >
         <div class="notice_box">
             <a href="#">공지사항</a>
-            <a href="page2/service.html" target="frame_target">서비스 전체보기></a>
+            <a href="page2/service.html" target="frame_target">네이버 서비스 전체보기></a>
         </div>
         <div class="aside_box">
             <div class="area_user">
