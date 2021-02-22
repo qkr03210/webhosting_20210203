@@ -9,7 +9,7 @@
     <style>
         * {
             /* background: #f2f4f7; */
-            width: 0 auto;
+            margin: 0 auto;
             max-width: 1183px;
         }
 
@@ -17,12 +17,16 @@
             text-align: center;
             margin: 0 auto;
         }
+
     </style>
 </head>
 
 <body>
     <div>
         <h1>웹 페이지 제작하면서있었던 과정</h1>
+        <div style="text-align : center;">
+            <img src="../page2_image/1.gif" alt="">
+        </div>
         <ul>
             <li>
                 <span>기존 bootstrap4로 작성된 HTML파일에 iframe을 사용해 새로운 기능을 추가하려 했으나 사이즈나 css파일을 구분하기 힘들어 새로 만들기로함</span>
@@ -56,6 +60,9 @@
             </li>
             <li>
                 <span>보안 문제인지 github,naver같은 사이트를 iframe으로 불러오는 경우 '연결을 거부했습니다'라는 오류화면이 생성됨<br>기존 화면에 추가하기로 결정</span>
+            </li>
+            <li>
+                <span>html의 width를 고정 수치로 설정하니 모니터의 크기에 따라 화면에 다르게 출력되는 것을 확인<br>header영역의 border를 일정 길이만큼 고정하기로 결정</span>
             </li>
         </ul>
     </div>
