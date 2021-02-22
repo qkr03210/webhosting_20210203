@@ -15,7 +15,7 @@ body {
   }
   * {
     box-sizing: border-box; /* 길이 계산을 편하게 하기위함. box-sizing에 관한 설명은 아래 링크를 참고해주세요 */
-
+    /* background-color: rgba(0, 0, 0, 0.322); */
     /* 여기다 전체 배경 설정 가능 */
     /* background-color: skyblue; */
   }
