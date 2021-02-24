@@ -109,6 +109,7 @@ header {
     align-items: center;
     font-size: 15px;
     font-weight: bold;
+    
     /* padding: 0 30px; */
   }
   .keyword {
@@ -126,4 +127,5 @@ header {
     text-decoration: none;
     cursor: pointer;
     color: black;
+
   }
