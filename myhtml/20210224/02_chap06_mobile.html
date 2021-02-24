@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 초기화하는 코드 */
+        * {
+            margin: 0 auto;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Helvetica', sans-serif;
+        }
+
+        li {
+            list-style: none;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        /* 헤더 부분 */
+        #main_header {
+            height: 45px;
+            background: url('header_background.png');
+
+            /* 자손 위치 지정 */
+            position: relative;
+            /*수평 중앙*/
+            text-align: center;
+            /*수직 중앙*/
+            line-height: 45px;
+
+        }
+
+        #main_header>h1 {
+            color: white;
+        }
+
+        #main_header>a,
+        #main_header>label {
+            display: block;
+            height: 32px;
+            position: absolute;
+        }
+
+        #main_header>a.left {
+            width: 62px;
+            left: 5px;
+            top: 7px;
+        }
+
+        #main_header>label.right {
+            width: 32px;
+            right: 5px;
+            top: 7px;
+        }
+
+        /* 스프라이트 이미지 적용 */
+        #main_header>a.left {
+            width: 62px;
+            height: 32px;
+            background: url('css_sprites.png') -1px -1px;
+        }
+
+        #main_header>label.right {
+            width: 32px;
+            height: 32px;
+            background: url('css_sprites.png') -65px -1px;
+            text-indent: -99999px;
+        }
+
+        #toggle {
+            display: none;
+        }
+
+        #toggle+#wrap>#toggle_gnb_wrap {
+            display: none;
+        }
+
+        #toggle:checked+#wrap>#toggle_gnb_wrap {
+            display: block;
+        }
+
+        #toggle_gnb_wrap {
+            background: aqua;
+            padding: 15px;
+        }
+
+        #toggle_gnb {
+            background: aquamarine;
+            padding: 5px;
+        }
+
+        #toggle_gnb>ul {
+            overflow: hidden;
+        }
+
+        #toggle_gnb>ul>li {
+            width: 80px;
+            float: left;
+        }
+
+        /* 네비게이션 */
+        #top_gnb{
+            overflow: hidden;
+            border-bottom: 1px solid black;
+            background: brown;
+        }
+        #top_gnb>div>a{
+            width: 25%;
+            float: left;
+
+            height: 35px;
+            line-height: 35px;
+            text-align: center;
+            color: white;
+        }
+        #bottom_gnb
+        {
+            display: table;
+            width: 100%;
+            border-bottom: 1px solid black;
+        }
+        #bottom_gnb>div{
+            display: table-cell;
+            position: relative;
+        }
+        #bottom_gnb>div>a{
+            display: block;
+            height: 35px;
+            line-height: 35px;
+            text-align: center;
+        }
+        #bottom_gnb>div>a::before{
+            display: block;
+            position: absolute;
+            top: 9px;
+            left: -1px;
+            width: 1px;
+            height: 15px;
+            border-left: 1px solid black;
+            content: '';
+        }
+        #section_header
+        {
+            padding: 20px;
+        }
+        #section_article
+        {
+            padding:20px
+        }
+        #main_footer
+        {
+            padding: 10px;
+            border-top: 3px solid black;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <input type="checkbox" id="toggle">
+    <div id="wrap">
+        <header id="main_header">
+            <a class="left" href="#"></a>
+            <h1>mobile</h1>
+            <label class="right" for="toggle">toggle</label>
+
+        </header>
+        <div id="toggle_gnb_wrap">
+            <div id="toggle_gnb">
+                <ul>
+                    <!-- (li>a[href=#])*8 -->
+                    <li><a href="#">버튼</a></li>
+                    <li><a href="#">버튼</a></li>
+                    <li><a href="#">버튼</a></li>
+                    <li><a href="#">버튼</a></li>
+                    <li><a href="#">버튼</a></li>
+                    <li><a href="#">버튼</a></li>
+                    <li><a href="#">버튼</a></li>
+                    <li><a href="#">버튼</a></li>
+                </ul>
+            </div>
+        </div>
+        <nav id="top_gnb">
+            <div><a href="#">버튼</a></div>
+            <div><a href="#">버튼</a></div>
+            <div><a href="#">버튼</a></div>
+            <div><a href="#">버튼</a></div>
+        </nav>
+        <nav id="bottom_gnb"><!---->
+            <div><a href="#">버튼</a></div>
+            <div><a href="#">버튼</a></div>
+            <div><a href="#">버튼</a></div>
+            <div><a href="#">버튼</a></div>
+            <div><a href="#">버튼</a></div>
+        </nav>
+        <section id="main_section">
+            <header id="section_header">
+                <h1>Lorem ipsum dolor sit.</h1>
+                <time>1999-99-99</time>
+
+            </header>
+            <article id="section_article">
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Delectus labore distinctio amet quasi aliquam dolores aut reiciendis obcaecati natus, voluptatibus laborum consequatur voluptates excepturi autem eaque, porro accusamus. Culpa error, sapiente qui aliquam provident obcaecati veniam consequuntur rerum voluptates itaque.</p>
+                <br>
+                <p>Lorem ipsum dolor sit amet.</p>
+                <br>
+                <p>Lorem, ipsum dolor.</p>
+            </article>
+        </section>
+        
+        <footer id="main_footer">
+            <h3>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam!</h3>
+            <address>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Minus, quod?</address>
+        </footer>
+    </div>
+    
+</body>
+
+</html>
