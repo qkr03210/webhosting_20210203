@@ -125,4 +125,5 @@ header {
   .nav_items ul > li > a {
     text-decoration: none;
     cursor: pointer;
+    color: black;
   }
