@@ -17,21 +17,72 @@
             text-align: center;
             margin: 0 auto;
         }
-        #mmm
-        {
+
+        #mmm {
+            font-size: 15pt;
             border: none;
+            outline: 0;
             border-style: hidden;
         }
+
+        ul {
+            padding-inline-start: 20px;
+        }
+
+        .container {
+            /* 그리드 구성하기 */
+            display: grid;
+            grid-template: 406px 1fr/ 1fr 1fr;
+            gap: 5px;
+
+            grid-template-areas:
+                'header header'
+                'aside content';
+        }
+
+        .cell-aside {
+            box-sizing: border-box;
+            border: 1px solid black;
+        }
+
+        .cell-content {
+            width: 570px;
+            box-sizing: border-box;
+            border: 1px solid black;
+        }
+
+        [class*=cell] {
+            padding: 20px;
+        }
+
+        .cell-header {
+            grid-area: header;
+        }
+
+        .cell-aside {
+            grid-area: aside
+        }
+
+        .cell-content {
+            grid-area: content
+        }
+
+       
     </style>
+
 </head>
 
 <body>
-    <div>
-        <h1>웹 페이지 제작하면서있었던 과정</h1>
-        <div style="text-align : center;">
-            <img src="../page2_image/1.gif" alt="">
+
+    <div class="container">
+        <div class="cell-header">
+            <h1>웹 페이지 제작 과정</h1>
+            <div style="text-align : center;">
+                <img src="../page2_image/1.gif" alt="">
+            </div>
         </div>
-        
+        <div class="cell-aside">
+            <!--         
         <details>
             <summary id="mmm"> 목차</summary>
             <ol>
@@ -39,50 +90,72 @@
                     뭔가 있음
                 </li>
             </ol>
-        </details>
+        </details> -->
 
-        <ul>
-            <li>
-                <span>기존 bootstrap4로 작성된 HTML파일에 iframe을 사용해 새로운 기능을 추가하려 했으나 사이즈나 css파일을 구분하기 힘들어 새로 만들기로함</span>
-            </li>
-            <li>
-                <span>bootstrap을 사용하지 않고 HTML을 작성하기로 결정</span>
-            </li>
-            <li>
-                <span>기본 틀은 깔끔해 보이는 네이버를 따라함</span>
-            </li>
-            <li>
-                <span>네이버 형식에서 있는 검색창에 기능을 추가하기 위해 스크립트를 사용하여 검색 기능 추가</span>
-            </li>
-            <li>
-                <span>기존 실습때 사용하던 width 960px로는 모든 화면을 꾸밀수 없다고 판단해서 주관적인 width를 작성</span>
-            </li>
-            <li>
-                <span>iframe을 통해 다른 html을 불러오는 방식으로 제작 <br>
-                    불러오는 html의 사이즈가 클 경우 화면에 모두 보이지 않고 잘리는 현상이 발생<br>
-                    불러오는 html파일의 width사이즈를 1183px로 고정하기로 결정</span>
-            </li>
-            <li>
-                <span>실시간 급상승 검색어가 위치했던 부분에 팝업 형식으로 리스트가 출력되는것을 목표로 하였으니 구현하지 못함<br>
-                    팀원이 details-summary기능을 사용하여 목차를 구현한것을 보고 참고하기로 결정<br>
-                    해당 기능이 header영역을 벗어나지 못하고 리스트가 아래쪽이 아닌 위쪽으로 확장되는 현상이 발생<br>
-                    해당 기능을 방문 횟수를 파악하는 기능으로 대체
-                </span>
-            </li>
-            <li>
-                <span>iframe으로 불러오는 페이지는 기존에 작성했던 html파일을 수정해서 활용하기로 결정</span>
-            </li>
-            <li>
-                <span>iframe 사용으로 인한 문제점<br> 보안 문제인지 github,naver같은 사이트를 iframe으로 불러오는 경우 '연결을 거부했습니다'라는 오류화면이 생성됨<br>기존 화면에 추가하기로 결정</span>
-            </li>
-            <li>
-                <span>width를 고정 수치로 하여 발생한 문제점<br> html의 width를 고정 수치로 설정하니 모니터의 크기에 따라 화면에 다르게 출력되는 것을 확인<br>header영역의 border를 일정 길이만큼 고정하기로 결정</span>
-            </li>
-            <li>
-                <span>배경 이미지를 추가하여 발생한 문제점<br>iframe으로 불러오는 html과 배경이미지가 다른것을 발견<br>불러오는 html파일에 투명도를 설정하여 해결</span>
-            </li>
-        </ul>
+            <ul>
+                <li>
+                    <span>기존 bootstrap4로 작성된 HTML파일에 iframe을 사용해 새로운 기능을 추가하려 했으나 사이즈나 css파일을 구분하기 힘들어 새로 만들기로함</span>
+                </li>
+                <li>
+                    <span>bootstrap을 사용하지 않고 HTML을 작성하기로 결정</span>
+                </li>
+                <li>
+                    <span>기본 틀은 깔끔해 보이는 네이버를 따라함</span>
+                </li>
+                <li>
+                    <span>네이버 형식에서 있는 검색창에 기능을 추가하기 위해 스크립트를 사용하여 검색 기능 추가</span>
+                </li>
+                <li>
+                    <span>기존 실습때 사용하던 width 960px로는 모든 화면을 꾸밀수 없다고 판단해서 주관적인 width를 작성</span>
+                </li>
+                <li>
+                    <span>iframe을 통해 main 영역에 다른 html을 불러오는 방식으로 제작</span>
+                </li>
+                <li>
+                    <span>실시간 급상승 검색어가 위치했던 부분에 팝업 형식으로 리스트가 출력되는것을 목표로 하였으니 구현하지 못함<br>
+                        팀원이 details-summary기능을 사용하여 목차를 구현한것을 보고 참고하기로 결정<br>
+                        해당 기능이 header영역을 벗어나지 못하고 리스트가 아래쪽이 아닌 위쪽으로 확장되는 현상이 발생<br>
+                        해당 기능을 방문 횟수를 파악하는 기능으로 대체
+                    </span>
+                </li>
+                <li>
+                    <span>iframe으로 불러오는 페이지는 기존에 작성했던 html파일을 수정해서 활용하기로 결정<br>불러오는 페이지는 bootstrap4가 적용된 페이지</span>
+                </li>
+
+            </ul>
+        </div>
+        <div class="cell-content">
+            <details>
+                <summary id="mmm"> iframe 사용으로 인한 문제점</summary>
+                <ol>
+                    <li>
+                        보안 문제인지 github,naver같은 사이트를 iframe으로 불러오는 경우 '연결을 거부했습니다'라는 오류화면이 생성됨<br>기존 화면에 추가하기로 결정
+                    </li>
+                    <li>
+                        불러오는 html의 사이즈가 클 경우 화면에 모두 보이지 않고 잘리는 현상이 발생<br>불러오는 html파일의 width사이즈를 1183px로 고정하기로 결정
+                    </li>
+                </ol>
+            </details>
+            <details>
+                <summary id="mmm"> width를 고정 수치로 하여 발생한 문제점</summary>
+                <ol>
+                    <li>
+                        html의 width를 고정 수치로 설정하니 모니터의 크기에 따라 화면에 다르게 출력되는 것을 확인<br>header영역의 border를 일정 길이만큼 고정하기로 결정
+                    </li>
+                </ol>
+            </details>
+            <details>
+                <summary id="mmm"> 배경 이미지를 추가하여 발생한 문제점</summary>
+                <ol>
+                    <li>
+                        iframe으로 불러오는 html과 배경이미지가 다른것을 발견<br>불러오는 html파일에 투명도를 설정하여 해결
+                    </li>
+                </ol>
+            </details>
+
+        </div>
     </div>
+
 </body>
 
 </html>
