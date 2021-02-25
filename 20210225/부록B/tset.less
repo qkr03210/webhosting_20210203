@@ -1,0 +1,17 @@
+@color:#351566;
+@defaultFontSize : 16px;
+@margin:10px;
+@color_Hover:#151565;
+body{
+    color:@color;
+    font-size: @defaultFontSize;
+    margin:@margin*10;
+}
+a{
+    color: @color;
+    // &는 자기 자신을 가르킴(a)
+    &:hover /*& 내장  선택자. 블록 안에서 자신을 가리킴*/
+    {
+        color: @color_Hover;
+    }
+}
